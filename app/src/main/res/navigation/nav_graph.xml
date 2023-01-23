@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_gameSelectorFragment"
+            app:destination="@id/gameSelectorFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSelectorFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.GameSelectorFragment"
+        android:label="fragment_game_selector"
+        tools:layout="@layout/fragment_game_selector" >
+        <action
+            android:id="@+id/action_gameSelectorFragment_to_brokenScreenSelectorFragment"
+            app:destination="@id/brokenScreenSelectorFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gameSelectorFragment_to_snakeFragment"
+            app:destination="@id/snakeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gameSelectorFragment_to_hairClipperFragment"
+            app:destination="@id/hairClipperFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/brokenScreenSelectorFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.screen.BrokenScreenSelectorFragment"
+        android:label="fragment_broken_screen_selector"
+        tools:layout="@layout/fragment_broken_screen_selector" >
+        <action
+            android:id="@+id/action_brokenScreenSelectorFragment_to_screenSettingsFragment"
+            app:destination="@id/screenSettingsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/snakeFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.SnakeFragment"
+        android:label="fragment_snake"
+        tools:layout="@layout/fragment_snake" />
+    <fragment
+        android:id="@+id/hairClipperFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.HairClipperFragment"
+        android:label="fragment_hair_clipper"
+        tools:layout="@layout/fragment_hair_clipper" >
+        <action
+            android:id="@+id/action_hairClipperFragment_to_hairClipperMachineFragment"
+            app:destination="@id/hairClipperMachineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenSettingsFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ScreenSettingsFragment"
+        android:label="fragment_screen_settings"
+        tools:layout="@layout/fragment_screen_settings" />
+    <fragment
+        android:id="@+id/hairClipperMachineFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.HairClipperMachineFragment"
+        android:label="fragment_hair_clipper_machine"
+        tools:layout="@layout/fragment_hair_clipper_machine" />
+</navigation>
