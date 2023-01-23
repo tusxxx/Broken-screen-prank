@@ -74,12 +74,12 @@
     </fragment>
     <fragment
         android:id="@+id/screenSettingsFragment"
-        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ScreenSettingsFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.ScreenSettingsFragment"
         android:label="fragment_screen_settings"
         tools:layout="@layout/fragment_screen_settings" />
     <fragment
         android:id="@+id/hairClipperMachineFragment"
-        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.HairClipperMachineFragment"
+        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.HairClipperMachineFragment"
         android:label="fragment_hair_clipper_machine"
         tools:layout="@layout/fragment_hair_clipper_machine" />
 </navigation>
