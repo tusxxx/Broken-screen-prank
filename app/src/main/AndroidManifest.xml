@@ -30,6 +30,7 @@
         <activity android:name=".ui.MainActivity"/>
 
         <service android:name=".ui.OverlayingService"/>
+        <service android:name=".ui.FullscreenOverlayService"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

@@ -11,11 +11,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.R
+import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.FullscreenOverlayService
 import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.OverlayingService
 
 class BrokenScreenSelectorFragment : Fragment(R.layout.fragment_broken_screen_selector) {
     private val screenAdapter: ScreenAdapter = ScreenAdapter {
-        requireActivity().startService(Intent(context, OverlayingService::class.java).apply {
+        requireActivity().startService(Intent(context, FullscreenOverlayService::class.java).apply {
             putExtra("screenResId", it)
             val mp = MediaPlayer.create(requireContext(), R.raw.glass_breaking)
             mp.start()
