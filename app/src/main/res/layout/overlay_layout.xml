@@ -6,35 +6,17 @@
     android:layout_height="match_parent"
     >
 
+    <ImageView
+        android:id="@+id/ivForeground"
+        android:translationZ="90dp"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.OverlayDrawingView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="invisible"
         />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-
-        <TextView
-            android:id="@+id/text_hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello Overlay!"
-            android:textSize="16sp"
-            android:textColor="#FFF"
-            />
-
-        <Button
-            android:id="@+id/button_stop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Stop"
-            />
-
-    </LinearLayout>
 
 </prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.FullscreenOverlayLayout>

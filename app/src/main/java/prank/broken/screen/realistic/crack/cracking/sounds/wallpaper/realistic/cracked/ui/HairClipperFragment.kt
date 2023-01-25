@@ -18,8 +18,12 @@ class HairClipperFragment : Fragment(R.layout.fragment_hair_clipper) {
 
         requireActivity().findViewById<ImageButton>(R.id.ibStartHair).setOnClickListener {
             App.showInterstitialAd(requireActivity())
-
             findNavController().navigate(R.id.action_hairClipperFragment_to_hairClipperMachineFragment)
+        }
+
+        requireActivity().findViewById<ImageButton>(R.id.btBackFromClipper).setOnClickListener {
+            App.showInterstitialAd(requireActivity())
+            findNavController().popBackStack()
         }
 
         requireActivity().findViewById<AdView>(R.id.adViewClipper)

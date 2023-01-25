@@ -7,8 +7,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
+import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.App
 import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.R
 
 class HairClipperMachineFragment : Fragment(R.layout.fragment_hair_clipper_machine) {
@@ -31,5 +33,10 @@ class HairClipperMachineFragment : Fragment(R.layout.fragment_hair_clipper_machi
         }
 
         requireActivity().findViewById<AdView>(R.id.adViewClipperMachine).loadAd(AdRequest.Builder().build())
+
+        requireActivity().findViewById<ImageButton>(R.id.btBackfromClipperMachine).setOnClickListener {
+            findNavController().popBackStack()
+            App.showInterstitialAd(requireActivity())
+        }
     }
 }

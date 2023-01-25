@@ -7,6 +7,16 @@
     android:background="@drawable/bg2"
     tools:context=".ui.HairClipperFragment">
 
+    <ImageButton
+        android:id="@+id/btBackFromClipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"

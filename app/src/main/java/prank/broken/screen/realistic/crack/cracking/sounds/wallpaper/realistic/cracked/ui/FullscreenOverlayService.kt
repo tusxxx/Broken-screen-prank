@@ -64,7 +64,7 @@ class FullscreenOverlayService : Service() {
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or
                         WindowManager.LayoutParams.FLAG_FULLSCREEN or
                         WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
                         WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS or
@@ -75,14 +75,14 @@ class FullscreenOverlayService : Service() {
             it.gravity = Gravity.START or Gravity.TOP
         }
 
-        floatingFaceBubble = ImageView(this)
+        floatingFaceBubble = ImageView(applicationContext)
         Glide
             .with(this)
             .load(AppCompatResources.getDrawable(this, drawableRes))
-            .into(floatingFaceBubble)
+            .into(overlay.findViewById(R.id.ivForeground))
         floatingFaceBubble.scaleType = ImageView.ScaleType.FIT_XY
 
-        windowManager.addView(floatingFaceBubble, layoutParams)
+        windowManager.addView(overlay, layoutParams)
         createNotification()
         hideApp()
 
@@ -122,13 +122,6 @@ class FullscreenOverlayService : Service() {
                 Manifest.permission.POST_NOTIFICATIONS
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return
         }
         NotificationManagerCompat.from(this).notify(1, builder.build())
