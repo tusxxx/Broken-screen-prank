@@ -4,6 +4,13 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storePassword 'asd'
+            keyAlias 'asd'
+            keyPassword 'asd'
+        }
+    }
     namespace 'prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked'
     compileSdk 33
 
@@ -50,4 +57,6 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
 }

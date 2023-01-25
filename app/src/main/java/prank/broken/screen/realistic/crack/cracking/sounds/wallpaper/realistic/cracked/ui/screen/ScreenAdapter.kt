@@ -3,14 +3,14 @@ package prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.R
 
-class ScreenAdapter : ListAdapter<Screen, ScreenViewHolder>(ScreenDiffUtil) {
+class ScreenAdapter(private val onScreenClick: (Int) -> Unit) :
+    ListAdapter<Screen, ScreenViewHolder>(ScreenDiffUtil) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScreenViewHolder {
         return ScreenViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.screen_item, parent, false)
@@ -18,17 +18,21 @@ class ScreenAdapter : ListAdapter<Screen, ScreenViewHolder>(ScreenDiffUtil) {
     }
 
     override fun onBindViewHolder(holder: ScreenViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), onScreenClick)
     }
 
 }
 
-class ScreenViewHolder(val itemView: View) : ViewHolder(itemView) {
-    fun bind(item: Screen) {
+class ScreenViewHolder(private val itemView: View) : ViewHolder(itemView) {
+    fun bind(item: Screen, onScreenClick: (Int) -> Unit) {
         Glide
             .with(itemView)
             .load(item.drawableRes)
             .into(itemView.findViewById(R.id.ivRootView))
+
+        itemView.setOnClickListener {
+            onScreenClick(item.drawableRes)
+        }
     }
 }
 

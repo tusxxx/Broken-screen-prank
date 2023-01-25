@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".ui.screen.BrokenScreenSelectorFragment">
 
     <ImageButton
-        android:id="@+id/btBack"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:background="@null"
+        android:translationZ="90dp"
+        android:id="@+id/btBackToGameSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvScreens"

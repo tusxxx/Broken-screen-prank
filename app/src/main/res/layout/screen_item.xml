@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_margin="32dp"
-    android:layout_width="128dp"
-    android:id="@+id/ivRootView"
-    android:layout_height="128dp">
+    android:layout_width="120dp"
+    android:background="@drawable/phone"
+    android:layout_height="220dp">
 
-</ImageView>
+    <ImageView
+        android:layout_marginTop="6dp"
+        android:translationZ="80dp"
+        android:layout_width="170dp"
+        android:layout_height="228dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/phone_frame"/>
+
+    <ImageView
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="4dp"
+        android:scaleType="fitXY"
+        android:id="@+id/ivRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

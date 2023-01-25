@@ -31,13 +31,6 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
-            android:id="@+id/action_gameSelectorFragment_to_snakeFragment"
-            app:destination="@id/snakeFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
-        <action
             android:id="@+id/action_gameSelectorFragment_to_hairClipperFragment"
             app:destination="@id/hairClipperFragment"
             app:enterAnim="@android:anim/slide_in_left"
@@ -49,20 +42,7 @@
         android:id="@+id/brokenScreenSelectorFragment"
         android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.screen.BrokenScreenSelectorFragment"
         android:label="fragment_broken_screen_selector"
-        tools:layout="@layout/fragment_broken_screen_selector" >
-        <action
-            android:id="@+id/action_brokenScreenSelectorFragment_to_screenSettingsFragment"
-            app:destination="@id/screenSettingsFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/snakeFragment"
-        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.SnakeFragment"
-        android:label="fragment_snake"
-        tools:layout="@layout/fragment_snake" />
+        tools:layout="@layout/fragment_broken_screen_selector" />
     <fragment
         android:id="@+id/hairClipperFragment"
         android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.HairClipperFragment"
@@ -72,11 +52,6 @@
             android:id="@+id/action_hairClipperFragment_to_hairClipperMachineFragment"
             app:destination="@id/hairClipperMachineFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/screenSettingsFragment"
-        android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.ScreenSettingsFragment"
-        android:label="fragment_screen_settings"
-        tools:layout="@layout/fragment_screen_settings" />
     <fragment
         android:id="@+id/hairClipperMachineFragment"
         android:name="prank.broken.screen.realistic.crack.cracking.sounds.wallpaper.realistic.cracked.ui.HairClipperMachineFragment"

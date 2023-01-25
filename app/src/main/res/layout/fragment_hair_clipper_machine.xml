@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg2"
     tools:context=".ui.HairClipperMachineFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/ivClipper"
+        android:src="@drawable/clipper_3"
+        android:background="@null"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent"/>
 
-</FrameLayout>
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="140dp"
+        android:id="@+id/btToggle"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="@color/trans" />
+
+    <com.google.android.gms.ads.AdView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/adViewClipperMachine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
